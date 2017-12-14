@@ -64,6 +64,17 @@ public class GLRenderer extends GLThread implements SurfaceTexture.OnFrameAvaila
     requestRender();
   }
 
+  public void setFilter(final String config) {
+    postRunnable(new Runnable() {
+      @Override
+      public void run() {
+        if (mRenderer != null) {
+          mRenderer.setFilterWidthConfig(config);
+        }
+      }
+    });
+  }
+
   @Override
   public void onCreated() {
     GLES20.glDisable(GLES20.GL_DEPTH_TEST);

@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     sm.getHolder().addCallback(new HolderCallBack());
 
     this.render.startPreview();
+    this.render.setFilter("@beautify face 1 480 640 @curve R(0, 0)(71, 74)(164, 165)(255, 255) @pixblend screen 0.94118 0.29 0.29 1 20");
   }
 
   @Override
